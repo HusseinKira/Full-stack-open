@@ -7,14 +7,7 @@ const Addnew = (props) =>{
     event.preventDefault()
     const names= props.persons.map((person)=>person.name)
    
-    // const replace = () =>{
-    //  if(window.confirm(`${props.newName} is already added to phonebook do u want to replace the number`)) {
-    //  const tempcontact= props.persons.map(person=>person.name.includes(props.newName))
-    //   console.log(tempcontact.name);
-
-    //  }
-
-    // }
+  
     
   if (names.includes(props.newName)){
       if(window.confirm(`${props.newName} is already added to phonebook do u want to replace the number`)) {
@@ -23,6 +16,8 @@ const Addnew = (props) =>{
       phoneservices
       .update(tempcontact.id,newcontact)
       .then(response=>{props.setPersons(props.persons.map(contact=>contact.id===tempcontact.id?response:contact))})
+      props.setNewName('')
+      props.setnewNumber('')
       }
 
   }

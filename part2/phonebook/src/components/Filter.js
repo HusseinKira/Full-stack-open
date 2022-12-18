@@ -3,7 +3,7 @@ const Filter =(props) =>{
   const filterdlist= filtered.map((person)=><div key={person.id}>{person.name} {person.number} </div> )
  
   return(<>
-      
+    <h3>filtered names:</h3>
     {filterdlist} 
    </>)
 

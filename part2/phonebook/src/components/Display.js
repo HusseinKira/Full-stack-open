@@ -18,7 +18,7 @@ const Display = ({persons,setPersons})=> {
       return(<div key={person.id}>{person.name} {person.number} <button onClick={()=> remove(person)}> delete </button></div>)} )
   
    return (
-    <><h3>Numbers</h3>
+    <><h3>Numbers:</h3>
        {list}
     </>)
   
