@@ -1,0 +1,24 @@
+.newadd{
+    color: rgb(63, 173, 96);
+    background: rgb(134, 133, 133);
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.error{
+
+
+    color: rgb(212, 49, 43);
+    background: rgb(134, 133, 133);
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
