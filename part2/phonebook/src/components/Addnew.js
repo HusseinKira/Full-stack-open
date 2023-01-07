@@ -30,8 +30,13 @@ const Addnew = (props) =>{
  phoneservices
 .create(newobj)
 .then(response=>props.setPersons(props.persons.concat(response)))
+.catch(error => {
+  props.settext('error')
+  
+   return props.setmessage(`${error.response.data.error} `)})
 
-props.settext('newadd')
+
+  props.settext('newadd')
 props.setmessage(`${props.newName} has been added`);
 
  setTimeout(() => {
@@ -54,7 +59,7 @@ return( <form onSubmit={addcontact}>
 
   <h2>add a new</h2>
   <div>  name: <input  value={props.newName} onChange={inputname}/></div>
-  <div> number: <input type='number' value={props.newNumber} onChange={inputnumber} /></div>
+  <div> number: <input type='tel' value={props.newNumber} onChange={inputnumber} /></div>
  
  <div>
     <button type="submit">add</button>
